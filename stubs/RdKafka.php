@@ -1,5 +1,6 @@
 <?php
 
+use RdKafka\ConsumerTopic;
 use RdKafka\Exception;
 use RdKafka\Metadata;
 use RdKafka\Topic;
@@ -70,7 +71,7 @@ abstract class RdKafka
      * @param string    $topic_name
      * @param TopicConf $topic_conf
      *
-     * @return Topic
+     * @return ConsumerTopic
      */
     public function newTopic($topic_name, TopicConf $topic_conf = null)
     {
